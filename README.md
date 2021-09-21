@@ -3,7 +3,13 @@ Repositório dos códigos utilizados em **programação Orientada a Objetos II d
 # Conteúdos:
 ## aula 1
 Manipulação de arquivos no Java: 
-* criando arquivo e diretórios
+* criando arquivos e diretórios
 * mover e copiar arquivos
 * ler e escrever em arquivos texto
 
+## aula 2
+Genéricos no Java:
+* métodos genéricos
+* classes genéricas
+* tipos limitados
+* wildcards
