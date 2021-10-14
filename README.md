@@ -13,3 +13,11 @@ Genéricos no Java:
 * classes genéricas
 * tipos limitados
 * wildcards
+
+## aula 3
+Lambdas no Java:
+* classes anônimas
+* interfaces funcionais
+* lambdas
+* referências de métodos
+* streams
