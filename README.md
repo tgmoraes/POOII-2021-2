@@ -21,3 +21,10 @@ Lambdas no Java:
 * lambdas
 * referências de métodos
 * streams
+
+## aula 4
+Conexão com Banco de Dados - JDBC:
+* criando uma conexão
+* rodando queries
+* setando parameters
+* tratando a resposta
