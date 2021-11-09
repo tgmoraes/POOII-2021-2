@@ -28,3 +28,21 @@ Conexão com Banco de Dados - JDBC:
 * rodando queries
 * setando parameters
 * tratando a resposta
+
+## aula 5
+Padrões de persistência de dados
+* Active Record
+* DAO (Data Access Object)
+* Repository
+
+## aula 6
+Introdução ao JavaFx
+* criando projeto JavaFX no Eclipse
+* Hello world
+* introdução a labels, text fields, eventos, botoẽs, layouts etc
+
+## aula 7
+Criadno um CRUD com Java FX no modelo MVC
+* usando o Scene Builder para criar telas
+* navegação entre telas
+* criando as controllers das telas
