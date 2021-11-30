@@ -1,37 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.ListagemContatosController">
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.InicialController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Selecione uma das opçoes:" />
+            <Button mnemonicParsing="false" onAction="#handleManterGrupos" prefHeight="93.0" prefWidth="159.0" text="Manter Grupos" />
+            <Button mnemonicParsing="false" onAction="#handleManterContatos" prefHeight="102.0" prefWidth="155.0" text="Manter Contatos" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </center>
    <top>
-      <Label text="Lista Contatos" textFill="#154d0a" BorderPane.alignment="CENTER">
+      <Label alignment="CENTER" contentDisplay="RIGHT" opacity="0.89" text="Tela Inicial" textAlignment="CENTER" BorderPane.alignment="CENTER">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
       </Label>
    </top>
-   <center>
-      <TableView fx:id="tabContatos" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-        <columns>
-          <TableColumn fx:id="clmId" prefWidth="50.0" text="id" />
-          <TableColumn fx:id="clmNome" prefWidth="376.0" text="nome" />
-            <TableColumn fx:id="clmTelefone" prefWidth="173.0" text="Telefone" />
-        </columns>
-      </TableView>
-   </center>
-   <bottom>
-      <HBox alignment="CENTER" prefHeight="51.0" prefWidth="600.0" spacing="40.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="btnAdicionaContato" alignment="CENTER" mnemonicParsing="false" onAction="#handleAdicionaContato" text="Adiciona Contato" />
-            <Button mnemonicParsing="false" onAction="#handleEditarContato" text="Editar Contato" />
-            <Button mnemonicParsing="false" onAction="#handleExcluiContato" text="Exclui Contato" />
-         </children>
-      </HBox>
-   </bottom>
 </BorderPane>

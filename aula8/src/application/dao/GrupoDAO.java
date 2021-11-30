@@ -1,13 +1,9 @@
 package application.dao;
 
 import java.sql.Statement;
-import java.time.LocalDate;
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
-import application.models.Contato;
 import application.models.Grupo;
 
 public class GrupoDAO implements DAO<Grupo> {

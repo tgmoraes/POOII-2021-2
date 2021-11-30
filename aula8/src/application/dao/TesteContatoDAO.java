@@ -1,7 +1,5 @@
 package application.dao;
 
-import java.time.LocalDate;
-
 import application.models.Contato;
 import application.models.Grupo;
 

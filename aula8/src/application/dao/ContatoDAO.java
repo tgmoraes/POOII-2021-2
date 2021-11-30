@@ -1,7 +1,6 @@
 package application.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
@@ -16,7 +15,7 @@ public class ContatoDAO implements DAO<Contato> {
 
 	@Override
 	public void insert(Contato obj) {
-		String sql = "INSERT INTO contato (nome, telefone, email, datanasc, idrupo) "
+		String sql = "INSERT INTO contato (nome, telefone, email, datanasc, idgrupo) "
 				+ "VALUES (?,?,?,?, ?) RETURNING id";
 		try(Connection con = ConnectionFactory.getConnection()){
 			var pstm = con.prepareStatement(sql);

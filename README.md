@@ -42,7 +42,18 @@ Introdução ao JavaFx
 * introdução a labels, text fields, eventos, botoẽs, layouts etc
 
 ## aula 7
-Criadno um CRUD com Java FX no modelo MVC
+Criando um CRUD com Java FX no modelo MVC
 * usando o Scene Builder para criar telas
 * navegação entre telas
 * criando as controllers das telas
+
+## aula 8
+Mapeamento Objeto-Relacional (ORM)
+* formas de mapear relacionamento (um para um, um para muitos, muitos para muitos)
+* outros mapeamentos: classes - tabelas, coluna - atributo, herança
+* exemplo de mapeamento relacionamento um para muitos com DAO
+
+## aula 9
+Complementando exemplo JavaFX:
+* complementando exemplo JavaFX anterior
+* discussão dos impactos de adicionar a tabela (e model) Grupo e relacionamento um para muitos

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.ListagemGrupoController">
+   <top>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="175.0" layoutY="8.0" text="Lista Grupos" textFill="#154d0a">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="TOP" defaultButton="true" layoutX="535.0" layoutY="5.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#handleTelaInicial" prefHeight="42.0" prefWidth="59.0" text="Tela Inicial" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" wrapText="true" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <TableView fx:id="tabGrupos" prefHeight="297.0" prefWidth="544.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="clmId" prefWidth="50.0" text="id" />
+          <TableColumn fx:id="clmNome" prefWidth="549.0" text="nome" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="51.0" prefWidth="600.0" spacing="40.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleAdicionaContato" text="Adiciona Contato" />
+            <Button mnemonicParsing="false" onAction="#handleEditarContato" text="Editar Contato" />
+            <Button mnemonicParsing="false" onAction="#handleExcluiContato" text="Exclui Contato" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

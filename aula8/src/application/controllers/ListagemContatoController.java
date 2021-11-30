@@ -7,8 +7,6 @@ import application.Main;
 import application.dao.ContatoDAO;
 import application.models.Contato;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -19,23 +17,17 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class ListagemContatosController implements Initializable {
-	private ObservableList<Contato> contatos;
-	@FXML
-	private TableColumn<Contato, Integer> clmId;
-	@FXML
-	private TableColumn<Contato, String> clmNome;
-	@FXML
-	private TableColumn<Contato, String> clmTelefone;
-	@FXML
-	private TableView<Contato> tabContatos;
-	@FXML
-	private Button btnAdicionaContato;
+public class ListagemContatoController implements Initializable {
+	@FXML private TableColumn<Contato, Integer> clmId;
+	@FXML private TableColumn<Contato, String> clmNome;
+	@FXML private TableColumn<Contato, String> clmTelefone;
+	@FXML private TableView<Contato> tabContatos;
+	@FXML private Button btnAdicionaContato;
 
 	private void carregaTable() {
 		ContatoDAO cDao = new ContatoDAO();
-		contatos = FXCollections.observableArrayList(cDao.list());
-		tabContatos.setItems(this.contatos);
+		var contatos = FXCollections.observableArrayList(cDao.list());
+		tabContatos.setItems(contatos);
 	}
 
 	@Override
@@ -48,9 +40,14 @@ public class ListagemContatosController implements Initializable {
 
 	@FXML
 	void handleAdicionaContato() {
-		Main.loadScene("TelaForm");
+		Main.loadScene("TelaFormContato");
 	}
 
+	@FXML
+	void handleTelaInicial() {
+		Main.loadScene("TelaInicial");		
+	}
+	
 	@FXML
 	void handleExcluiContato() {
 		Contato alvo = this.tabContatos.getSelectionModel().getSelectedItem();
@@ -64,7 +61,7 @@ public class ListagemContatosController implements Initializable {
 			if (ret.isPresent() && ret.get() == ButtonType.OK) {
 				ContatoDAO cDao = new ContatoDAO();
 				cDao.delete(alvo.getId());
-				Main.loadScene("TelaInicial");
+				Main.loadScene("TelaListaContato");
 			}
 		} else {
 			var alerta = new Alert(AlertType.INFORMATION);
@@ -81,7 +78,7 @@ public class ListagemContatosController implements Initializable {
 		if (alvo != null) {
 
 			// acao editar
-			Main.loadScene("TelaForm", alvo);
+			Main.loadScene("TelaFormContato", alvo);
 		} else {
 			var alerta = new Alert(AlertType.INFORMATION);
 			alerta.setHeaderText("Contato não selecionado!");
